@@ -12,7 +12,7 @@ def sqrt(x, y):
             if((number + j/i) **2 > x):
                 number = (number + (j-1)/i)
                 break
-    return round(number,y)
+    return round(number,y) # Numbers like 0 and 9 cause the for loop to return too much, so the digit constraint was used.
 
 
 while True:
