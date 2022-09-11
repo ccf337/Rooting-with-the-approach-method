@@ -1,23 +1,23 @@
-def karekok(x,y):
+def sqrt(x, y):
 
     if(x<=1):
-        return("Tanımsız")
+        return("Undefined")
     for i in range(x):
         if(i*i >x):
-            ilksayi=i-1
+            number=i-1
             break
     for i in range(1,y+1):
         i=10**i
         for j in range(10):
-            if((ilksayi + j/i) **2 > x):
-                ilksayi = (ilksayi + (j-1)/i)
+            if((number + j/i) **2 > x):
+                number = (number + (j-1)/i)
                 break
-    return ilksayi
+    return round(number,y)
 
 
 while True:
     try:
-        print(karekok(int(input("Sayı: ")),int(input("Virgülden sonra kaç hane alınacak?"))))
+        print(sqrt(int(input("number: ")), int(input("Number of digits after comma"))))
     except ValueError:
-        print("Integer bir sayı giriniz.")
+        print("Please enter an integer type number.")
         continue
